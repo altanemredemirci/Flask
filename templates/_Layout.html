@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Basic -->
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <!-- Site Metas -->
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+
+    <title>Drool</title>
+
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css"/>
+
+    <!-- fonts style -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Poppins:400,700&display=swap" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="/static/css/style.css" rel="stylesheet"/>
+    <!-- responsive style -->
+    <link href="/static/css/responsive.css" rel="stylesheet"/>
+</head>
+<body class="sub_page">
+<div class="hero_area ">
+    <!-- header section strats -->
+    <header class="header_section">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg custom_nav-container">
+                <a class="navbar-brand" href="/">
+                    <img src="/static/images/logo.png" alt="">
+                </a>
+                <div class="" id="">
+                    <div class="User_option">
+                        <form class="form-inline my-2  mb-3 mb-lg-0">
+                            <input type="search" placeholder="Search">
+                            <button class="btn   my-sm-0 nav_search-btn" type="submit"></button>
+                        </form>
+                    </div>
+
+                    <div class="custom_menu-btn">
+                        <button onclick="openNav()">
+                <span class="s-1">
+
+                </span>
+                            <span class="s-2">
+
+                </span>
+                            <span class="s-3">
+                </span>
+                        </button>
+                    </div>
+                    <div id="myNav" class="overlay">
+                        <div class="overlay-content">
+                            <a href="/Home">Home</a>
+                            <a href="/About">About</a>
+                            <a href="/Contact">Contact Us</a>
+                            {% if session["admin"] %}
+                            <a href="/Admin">Admin</a>
+                             {% else %}
+                            {%endif%}
+                            {% if session["user"] %}
+                            <a href="/Logout">Logout</a>
+                            {% else %}
+                            <a href="/Login">Login</a>
+                            <a href="/Register">Register</a>
+                            {%endif%}
+
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- end header section -->
+
+
+    {% block content %}
+
+    {% endblock %}
+
+    <!-- footer section -->
+    <section class="container-fluid footer_section ">
+        <p>
+            &copy; 2019 All Rights Reserved. Design by
+            <a href="https://html.design/">Free Html Templates</a>
+        </p>
+    </section>
+    <!-- end  footer section -->
+    <!-- info section -->
+    <section class="info_section ">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-3">
+                    <div class="info_contact">
+                        <h5>
+                            CONTACT INFO
+                        </h5>
+                        <div>
+                            <img src="/static/images/call.png" alt=""/>
+                            <p>
+                                +01 1234567890
+                            </p>
+                        </div>
+                        <div>
+                            <img src="/static/images/mail.png" alt=""/>
+                            <p>
+                                demo@gmail.com
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="info_time">
+                        <h5>
+                            Opening Hours Shop
+                        </h5>
+                        <div>
+                            <p>
+                                Monday to friday
+                            </p>
+                        </div>
+                        <div>
+                            <p>
+                                07:00 am to 04:00 pm
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="info_social">
+                        <h5>
+                            social media
+                        </h5>
+                        <div class="social_container">
+                            <div>
+                                <a href="">
+                                    <img src="/static/images/fb.png" alt=""/>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="">
+                                    <img src="/static/images/twitter.png" alt=""/>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="">
+                                    <img src="/static/images/linkedin.png" alt=""/>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="">
+                                    <img src="/static/images/instagram.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="info_form pl-lg-4">
+                        <h5>
+                            Newsletter
+                        </h5>
+                        <form action="">
+                            <input type="text" placeholder="Enter Your Email"/>
+                            <button type="submit">
+                                Subscribe
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- end info_section -->
+
+    <script type="text/javascript" src="/static/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="/static/js/bootstrap.js"></script>
+    <script>
+        function openNav() {
+            document.getElementById("myNav").classList.toggle("menu_width")
+            document.querySelector(".custom_menu-btn").classList.toggle("menu_btn-style")
+        }
+    </script>
+
+</body>
+
+</html>

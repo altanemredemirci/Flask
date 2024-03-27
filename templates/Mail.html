@@ -1,0 +1,27 @@
+{% extends '_LayoutAdmin.html' %}
+
+{% block content %}
+                 <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Email</th>
+      <th scope="col">Message</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for i in mails%}
+    <tr>
+     <td>{{i[0]}}</td>
+     <td>{{i[1]}}</td>
+     <td>{{i[2]}}</td>
+     <td>{{i[3]}}</td>
+     <td>{{i[4]}}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+
+{% endblock %}

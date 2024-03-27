@@ -1,0 +1,18 @@
+{% extends '_LayoutAdmin.html' %}
+
+{% block content %}
+
+<form action="AdminAbout" method="post">
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Hakkımızda</label>
+    <input type="text" name="hakkimizda" class="form-control" id="exampleInputEmail1" value="{{about[1]}}" aria-describedby="emailHelp">
+
+  </div>
+
+  <button type="submit" class="btn btn-primary">Güncelle</button>
+
+
+</form>
+
+{% endblock%}
